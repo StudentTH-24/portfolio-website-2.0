@@ -1,0 +1,277 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
+.button {
+    display: inline-block;
+    border: none;
+    font-family: inherit;
+    background-color: #c2cab9;
+    color: #000000;
+    padding: 7px;
+    border-radius: 7px;
+    border-bottom: 7px;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  
+  body {
+    background-color: #f1f3f5;
+    font-family: "Strait", sans-serif;
+    /*code copied in from google fonts*/
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #000000;
+    margin-left: 20px;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /* This single "*" applies the property to all elements. Border-box includes the padding and border properties is the sizing 
+    this means a content box set to 100px will actually be 100px even if the content box is 100px, 
+    padding is 10px and border is 2px */
+  }
+  
+  a {
+    color: #5d7940;
+  }
+  
+  a:visited {
+    color: #000000;
+  }
+  
+  a:hover {
+    font-style: italic;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 20px;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+  }
+  
+  a:active {
+    color: #eda5b1;
+  }
+  
+  a:focus {
+    outline-color: #eda5b1;
+  }
+  
+  #send-message {
+    margin-left: 20px;
+  }
+  
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    clear: both;
+    /*this element property clears all floats both left and right */
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  #logo {
+    float: left;
+  }
+  
+  .page-header {
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  
+  .page-header__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 200px;
+            flex: 0 1 200px;
+  }
+  
+  .page-header__item:last-child {
+    /* #.page-header__item:nth-child(1) or (2) or whatever number child would isolate and affect that child
+    element in particular  */
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+  }
+  
+  .navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    clear: both;
+    gap: 10px;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    padding-right: 10px;
+  }
+  
+  .portfoliopic {
+    width: 250px;
+    height: auto;
+    margin-right: 40px;
+    border-radius: 50%;
+    float: left;
+  }
+  
+  /* You can only set height and width for elements with display:block or inline-block and you can use pixels or % 
+  you can create a responsive layout by assigning "min-width:" and "max-width" to help display on different devices */
+  .portfolio {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .return-home {
+    margin: 20px 20px;
+  }
+  
+  .page-footer {
+    clear: both;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .social-media {
+    display: inline-block;
+  }
+  
+  #logo:hover,
+  #send-message:hover {
+    opacity: 0.5;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition-duration: 0.6s;
+            transition-duration: 0.6s;
+  }
+  
+  #lukalink:hover,
+  #lukagit:hover {
+    opacity: 0.5;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition-duration: 0.6s;
+            transition-duration: 0.6s;
+  }
+  
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .grid__item {
+    background-color: #c2cab9;
+    padding: 10px;
+  }
+  
+  @media all and (max-width: 500px) {
+    .grid {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+      -ms-grid-columns: 1fr 10px 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+  
+    .grid__item:last-child {
+      grid-column: auto/auto;
+      grid-row: auto/auto;
+    }
+  
+    h1 {
+      font-size: 22px;
+    }
+  
+    svg * {
+      transform-box: fill-box;
+    }
+  }
+  .golf-animation {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/butler-flagin.svg");
+    /* Set initial background image */
+    -webkit-animation: pull-flag 3s infinite;
+            animation: pull-flag 3s infinite;
+    /* Combine animations */
+  }
+  
+  @-webkit-keyframes pull-flag {
+    0% {
+      background-image: url("../img/butler-flagin.svg");
+    }
+    45% {
+      background-image: url("../img/butler-flagin.svg");
+    }
+    50% {
+      background-image: url("../img/butler-flagout.svg");
+    }
+    95% {
+      background-image: url("../img/butler-flagout.svg");
+    }
+    100% {
+      background-image: url("../img/butler-flagin.svg");
+    }
+  }
+  
+  @keyframes pull-flag {
+    0% {
+      background-image: url("../img/butler-flagin.svg");
+    }
+    45% {
+      background-image: url("../img/butler-flagin.svg");
+    }
+    50% {
+      background-image: url("../img/butler-flagout.svg");
+    }
+    95% {
+      background-image: url("../img/butler-flagout.svg");
+    }
+    100% {
+      background-image: url("../img/butler-flagin.svg");
+    }
+  }
+  @media all and (max-width: 500px) {
+    .navigation-list li {
+      font-size: 14px;
+    }
+  }
+  @media all and (max-width: 600px) {
+    .portfolio {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
+  }

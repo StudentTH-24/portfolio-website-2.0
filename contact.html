@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> The Trevor Higgins Project </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.production.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Strait&display=swap">
+</head>
+<body>
+    <header class="page-header"> <!--"Class" is considered a "block" element and desribes the purpose of the emement like a
+        men or a button or in this case a page-header-->
+        <a href="../pages/index.html" target="_self"> <img id="logo" src="../img/trevor-higgins-logo.svg" alt="Trevor Higgins Logo of 
+                sillhoutted headphones around a coffee mug" class="page-header__item"></a> <!--"id" must me nested in the image tab in order to 
+                    manipulate with pseudo classes-->
+                    <nav class="main-navigation page-header__item">
+                        <ul role="menubar" class="navigation-list">
+                            <!--Roles help with accessibility, these roles can alose be found on W3 under ARIA roles-->
+                            <li role="presentation">
+                                <a href="../pages/index.html" role="menuitem" class="navigation-list__item--active"> Home </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="../pages/about.html" role="menuitem" class="navigation-list__item"> About Me </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="../pages/work.html" role="menuitem" class="navigation-list__item"> Work </a>
+                            </li> 
+                            <li role="presentation">
+                            <a href="../pages/contact.html" role="menuitem" class="navigation-list__item"> Contact </a>
+                            </li>
+                        </ul>
+                    </nav>
+    </header>
+    <main>
+        <div class="contact-method">
+            <a href="mailto:higginst.th@gmail.com"> E-Mail Me </a><br>
+            <a href="tel:+16032055597"> Give me a Call</a> <br>
+        </div>
+    </main>
+    <p>Contact Form</p>
+
+    <form action="../contact-form-data/" method="post" id="contact-form">
+        <!--Action is to show how the request in handled on the server side-->
+
+        <label class="standard-label" for="email"> Email </label>
+        <input type="email" id="email" required>
+
+        <label class="standard-label" for="telephone"> Telephone </label>
+        <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="telephone">
+
+        <label class="standard-label" for="message"> Message </label>
+        <textarea required maxlength="240" id="message"></textarea> <!--the textarea tab allows for more space or less space
+        for a text block-->
+        <input type="image" id="send-message" alt="Send Message Button" src="../img/send-message.svg">
+    </form>
+    <script src="../js/tota11y.min.js"></script>
+    <!--the tota11y scripts is used to monitor accessibility and semantics on the page-->
+    <a href="../pages/index.html" class="button" target="_self"> Back to Homepage </a>
+    
+    <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+            <a href="https://github.com/StudentTH-24" target="_blank"> <img id="lukagit" src="../img/lukagit.svg"
+                    alt="GitHub Hyperlink"> </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/trevor-higgins-296796172/" target="_blank"> <img id="lukalink"
+                    src="../img/lukalink.svg" alt="Linkedin Hyperlink"> </a>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

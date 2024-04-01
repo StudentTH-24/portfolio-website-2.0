@@ -1,0 +1,242 @@
+$backgroundcolor: #f1f3f5;
+$buttoncolor: #c2cab9;
+$buttonhovercolor: #eaefe8;
+$linkcolor :#5d7940;
+$activelinkcolor: #eda5b1;
+$focusoutlinecolor: #eda5b1;
+$visitedlinkcolor: #000000;
+$textcolor: #000000;
+
+%button {
+display: inline-block;
+border: none;
+font-family: inherit;
+background-color:$buttoncolor;
+color: $textcolor;
+padding: 7px;
+border-radius: 7px;
+border-bottom: 7px;
+transition-duration: .3s;
+margin-top: 10px;
+text-decoration: none;
+}
+body {
+    background-color:$backgroundcolor;
+    font-family: "Strait", sans-serif; /*code copied in from google fonts*/
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.2;
+    color:$textcolor;
+    margin-left: 20px;
+}
+* {
+    box-sizing: border-box;
+    /* This single "*" applies the property to all elements. Border-box includes the padding and border properties is the sizing 
+    this means a content box set to 100px will actually be 100px even if the content box is 100px, 
+    padding is 10px and border is 2px */
+}
+a {
+    color:$linkcolor;
+}
+a:visited {
+    color:$visitedlinkcolor;
+}
+
+a:hover {
+    font-style: italic;
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 20px;
+    transition-duration: .2s;
+}
+a:active {
+    color:$activelinkcolor
+}
+
+a:focus {
+    outline-color:$focusoutlinecolor
+}
+.button {
+@extend %button
+}
+
+#send-message {
+    margin-left: 20px;
+}
+
+.page-header {
+    display: flex;
+    clear: both;
+    /*this element property clears all floats both left and right */
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#logo {
+    float: left;
+}
+
+.page-header {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    /* #.page-header__item:nth-child(1) or (2) or whatever number child would isolate and affect that child
+    element in particular  */
+    flex-grow: 1;
+    text-align: right;
+    flex-basis: 200px;
+
+}
+
+.navigation-list {
+    display: flex;
+    list-style: none;
+    clear: both;
+    gap: 10px;
+    justify-content: right;
+    padding-right: 10px;
+}
+
+.portfoliopic {
+    width: 250px;
+    height: auto;
+    margin-right: 40px;
+    border-radius: 50%;
+    float: left;
+}
+
+/* You can only set height and width for elements with display:block or inline-block and you can use pixels or % 
+you can create a responsive layout by assigning "min-width:" and "max-width" to help display on different devices */
+
+.portfolio {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.return-home {
+    margin: 20px 20px;
+}
+
+.page-footer {
+    clear: both;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.social-media {
+    display: inline-block;
+}
+
+#logo:hover,
+#send-message:hover {
+    opacity: .5;
+    transform: scale(1.2);
+    transition-duration: .6s;
+
+}
+
+#lukalink:hover,
+#lukagit:hover {
+    opacity: .5;
+    transform: scale(1.2);
+    transition-duration: .6s;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.grid__item {
+    background-color: #c2cab9;
+    padding: 10px
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    svg * {
+        transform-box: fill-box;
+    }
+}
+
+
+.golf-animation {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../img/butler-flagin.svg');
+    /* Set initial background image */
+    animation: pull-flag 3s infinite;
+    /* Combine animations */
+}
+
+@keyframes pull-flag {
+    0% {
+        background-image: url('../img/butler-flagin.svg');
+    }
+
+    45% {
+        background-image: url('../img/butler-flagin.svg');
+    }
+
+    50% {
+        background-image: url('../img/butler-flagout.svg');
+    }
+
+    95% {
+        background-image: url('../img/butler-flagout.svg');
+    }
+
+    100% {
+        background-image: url('../img/butler-flagin.svg');
+    }
+}
+@media all and (max-width:500px) {
+.navigation-list li {
+   font-size: 14px;
+}
+}
+@media all and (max-width: 600px){
+.portfolio {
+    grid-template-columns: 1fr;
+}}
+
